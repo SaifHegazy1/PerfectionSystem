@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="180.0" styleClass="main_menu_container" stylesheets="@../../../../../../PerfectionSystem/src/main/resources/Styles/AccountantMenu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.perfectionsystem.Controllers.Accountant.AccountantMenuController">
+    <AnchorPane prefHeight="756.0" prefWidth="163.0" styleClass="left_container" stylesheets="@../../Styles/AccountantMenu.css">
+        <VBox prefHeight="80.0" prefWidth="160.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <FontAwesomeIconView glyphName="LAPTOP" size="30" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Perfection System">
+                <font>
+                    <Font size="10.0" />
+                </font>
+            </Text>
+        </VBox>
+        <VBox prefHeight="400.0" prefWidth="160.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <Button fx:id="registration_btn" mnemonicParsing="false" text="Registration">
+                <graphic>
+                    <FontAwesomeIconView glyphName="PLUS" size="20" />
+                </graphic>
+            </Button>
+            <Button fx:id="exam_btn" mnemonicParsing="false" text="Exam">
+                <graphic>
+                    <FontAwesomeIconView glyphName="FILE_ALT" size="20" />
+                </graphic>
+            </Button>
+         <Button fx:id="handin_btn" mnemonicParsing="false" text="Hand in">
+            <graphic>
+               <FontAwesomeIconView glyphName="SHARE_SQUARE" size="25" />
+            </graphic>
+         </Button>
+            <Button fx:id="dashboard_btn" mnemonicParsing="false" text="DashBoard">
+                <graphic>
+                    <FontAwesomeIconView glyphName="BAR_CHART" size="20" />
+                </graphic>
+            </Button>
+            <Button fx:id="logout_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Logout">
+                <graphic>
+                    <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="20" />
+                </graphic>
+            </Button>
+        </VBox>
+    </AnchorPane>
+</VBox>

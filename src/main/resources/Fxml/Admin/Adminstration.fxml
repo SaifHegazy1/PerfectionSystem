@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.perfectionsystem.Controllers.Admin.AdminstrationController">
+   <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="770.0" prefWidth="925.0" AnchorPane.leftAnchor="14.0"
+               AnchorPane.topAnchor="14.0">
+      <children>
+         <Label layoutX="14.0" layoutY="14.0" text="Hi, Hossam">
+            <font>
+               <Font size="27.0"/>
+            </font>
+         </Label>
+      </children>
+   </AnchorPane>
+</AnchorPane>

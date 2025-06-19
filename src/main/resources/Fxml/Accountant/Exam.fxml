@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.perfectionsystem.Controllers.Accountant.ExamController">
+    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../Styles/Registration.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+        <HBox layoutX="14.0" layoutY="14.0" prefHeight="54.0" prefWidth="630.0">
+            <TextField fx:id="examIdSearch_fld" prefHeight="37.0" prefWidth="148.0" promptText="ID" />
+            <TextField fx:id="examNameSearch_fld" prefHeight="37.0" prefWidth="148.0" promptText="Name" />
+            <TextField fx:id="examPhoneNoSearch_fld" prefHeight="37.0" prefWidth="148.0" promptText="Phone No" />
+            <Button fx:id="search_btn" mnemonicParsing="false" prefHeight="35.0" prefWidth="174.0" style="-fx-pref-height: 37;" styleClass="button_primary" stylesheets="@../../Styles/Registration.css" text="Search">
+                <graphic>
+                    <FontAwesomeIconView glyphName="SEARCH" />
+                </graphic>
+            </Button>
+        </HBox>
+        <TabPane layoutX="11.0" layoutY="68.0" prefHeight="635.0" prefWidth="900.0" stylesheets="@../../Styles/Registration.css" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="Quick Assignment">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <Text layoutX="19.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="ID" wrappingWidth="20.6839599609375">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="21.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Name" wrappingWidth="70.28396987915039">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="21.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Group" wrappingWidth="70.28396987915039">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="21.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Registration Time" wrappingWidth="174.39999999999986">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="21.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Mark" wrappingWidth="174.39999999999986">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="468.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Student's Mark" wrappingWidth="205.6000122070311">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="examMark_fld" layoutX="463.0" layoutY="230.0" prefHeight="38.0" prefWidth="206.0" />
+                    <Button fx:id="examConfirm_btn" layoutX="512.0" layoutY="300.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="94.0" style="-fx-background-color: #2E8B57; -fx-text-fill: #FFFFFF;" text="Confirm">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Button>
+                    <Label fx:id="examId_lbl" layoutX="17.0" layoutY="44.0" text="S-025">
+                        <font>
+                            <Font size="25.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="examName_lbl" layoutX="17.0" layoutY="116.0" prefHeight="28.0" prefWidth="324.0" text="سيف ممدوح حسن مصطفى حجازي">
+                        <font>
+                            <Font size="19.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="examGroup_lbl" layoutX="29.0" layoutY="176.0" text="Alpha San">
+                        <font>
+                            <Font size="19.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="examRegTime_lbl" layoutX="29.0" layoutY="243.0" text="4/21/2025 10:35 PM ">
+                        <font>
+                            <Font size="21.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="examMark_lbl" layoutX="30.0" layoutY="319.0" prefHeight="36.0" prefWidth="37.0" text="20">
+                        <font>
+                            <Font size="25.0" />
+                        </font>
+                    </Label>
+               <Label fx:id="quickExamError_lbl" layoutX="463.0" layoutY="274.0" style="-fx-text-fill: #FF0000;" text="error : " />
+                </AnchorPane>
+            </Tab>
+            <Tab text="Default Assigmemt">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="900.0">
+                    <TableView prefHeight="562.0" prefWidth="864.0">
+                        <columns>
+                            <TableColumn prefWidth="75.0" text="ID" />
+                            <TableColumn prefWidth="116.00006866455078" text="Name" />
+                            <TableColumn prefWidth="130.4000244140625" text="Student No" />
+                            <TableColumn prefWidth="130.39996337890625" text="Parent No" />
+                            <TableColumn prefWidth="213.59994506835938" text="Registration Time" />
+                            <TableColumn prefWidth="116.7999267578125" text="Mark" />
+                            <TableColumn prefWidth="437.60009765625" text="Edit" />
+                        </columns>
+                    </TableView>
+                </AnchorPane>
+            </Tab>
+        </TabPane>
+        <Button fx:id="startAssigning_btn" layoutX="371.0" layoutY="724.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="178.0" style="-fx-background-color: #2E8B57; -fx-pref-width: 180; -fx-text-alignment: center; -fx-text-fill: #FFFFFF;" styleClass="button_primary" text="Start Assigning Marks" />
+        <CheckBox fx:id="examShamal_checkbox" layoutX="707.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="120.0" style="-fx-font-size: 20;" stylesheets="@../../Styles/Registration.css" text="Shamel ">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </CheckBox>
+    </AnchorPane>
+</AnchorPane>

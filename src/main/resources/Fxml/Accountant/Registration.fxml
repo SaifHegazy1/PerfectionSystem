@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="950.0" stylesheets="@../../Styles/Registration.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.perfectionsystem.Controllers.Accountant.RegisterationController">
+   <HBox layoutX="325.0" layoutY="8.0" prefHeight="54.0" prefWidth="630.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="8.0">
+      <TextField fx:id="RegIdSearch_fld" prefHeight="37.0" prefWidth="148.0" promptText="ID" />
+      <TextField fx:id="RegNameSearch_fld" prefHeight="37.0" prefWidth="148.0" promptText="Name" />
+      <TextField fx:id="RegPhoneNoSearch_fld" prefHeight="37.0" prefWidth="148.0" promptText="Phone No" />
+      <Button fx:id="Regsearch_btn" mnemonicParsing="false" prefHeight="35.0" prefWidth="174.0" style="-fx-pref-height: 37;" styleClass="button_primary" text="Search">
+         <graphic>
+            <FontAwesomeIconView glyphName="SEARCH" />
+         </graphic>
+      </Button>
+   </HBox>
+   <CheckBox fx:id="revision_checkbox" layoutX="673.0" layoutY="25.0" mnemonicParsing="false" text="Revision or Shamel " AnchorPane.topAnchor="25.0">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </CheckBox>
+   <TabPane layoutX="16.0" layoutY="74.0" prefHeight="651.0" prefWidth="920.0" styleClass="tab" stylesheets="@../../Styles/Registration.css" tabClosingPolicy="UNAVAILABLE">
+      <Tab fx:id="quickreg_tab" closable="false" text="Quick Registration">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="500.0" prefWidth="300.0" styleClass="content_container" AnchorPane.topAnchor="14.0">
+               <Text layoutX="17.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="ID" />
+               <Label fx:id="RegId_lbl" layoutX="4.0" layoutY="41.0" prefHeight="40.0" prefWidth="69.0" styleClass="label_value" text="S-1" />
+               <Text layoutX="19.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Name" wrappingWidth="49.70625305175781" />
+               <Label fx:id="RegName_lbl" layoutX="14.0" layoutY="101.0" prefHeight="40.0" prefWidth="202.0" styleClass="label_value" text="سيف ممدوح حسن مصطفى حجازي" />
+               <Text layoutX="12.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Student Number" />
+               <Label fx:id="RegStudentNo_lbl" layoutX="19.0" layoutY="167.0" prefHeight="30.0" prefWidth="222.0" styleClass="label_value" text="01228203768" />
+               <Text layoutX="16.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Parent Number" />
+               <Label fx:id="RegParentNo_lbl" layoutX="18.0" layoutY="225.0" prefHeight="38.0" prefWidth="223.0" styleClass="label_value" text="01228203768" />
+               <Text layoutX="14.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Presence for Last Lecture " />
+               <Label fx:id="lastPresence_lbl" layoutX="11.0" layoutY="295.0" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #00FF00; -fx-text-fill: #FFFFFF;" styleClass="label_value" text="Yes" />
+               <Button fx:id="quickRegEditStudent_btn" layoutX="7.0" layoutY="359.0" mnemonicParsing="false" prefWidth="88.0" styleClass="button_primary" text="Edit" />
+            </AnchorPane>
+            <AnchorPane layoutX="331.0" layoutY="14.0" prefHeight="547.0" prefWidth="278.0" style="-fx-background-color: #FFFFFF;" styleClass="content_container" AnchorPane.topAnchor="14.0">
+               <Text layoutX="10.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Monthly Payment State" />
+               <Label fx:id="monthlyPayState_lbl" layoutX="11.0" layoutY="32.0" prefHeight="24.0" prefWidth="41.0" style="-fx-background-color: #00FF00; -fx-text-fill: #FFFFFF;" styleClass="label_value" text="YES" />
+               <Text layoutX="17.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Paid" />
+               <Label fx:id="monthlyPayPaid_lbl" layoutX="11.0" layoutY="82.0" styleClass="label_value" text="520" />
+               <Text layoutX="15.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Remaining" />
+               <Label fx:id="monthlyPayRemaining_lbl" layoutX="11.0" layoutY="126.0" styleClass="label_value" text="0" />
+               <Text layoutX="12.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Notes for Monthly payment" />
+               <Label fx:id="monthlyPayNote_lbl" layoutX="11.0" layoutY="170.0" prefHeight="38.0" prefWidth="256.0" styleClass="label_value" text="Done" />
+               <Button fx:id="RegBookPay_btn" layoutX="9.0" layoutY="473.0" mnemonicParsing="false" styleClass="button_primary" text="Pay" />
+               <Text layoutX="15.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Book Payment State" />
+               <Label fx:id="bookPayState_lbl" layoutX="11.0" layoutY="280.0" prefHeight="24.0" prefWidth="62.0" style="-fx-background-color: #FFD700; -fx-text-fill: #FFFFFF;" styleClass="label_value" text="Not All" />
+               <Text layoutX="17.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Paid" />
+               <Label fx:id="bookPayPaid_lbl" layoutX="11.0" layoutY="324.0" styleClass="label_value" text="150" />
+               <Text layoutX="21.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Remaining" />
+               <Label fx:id="bookPayRemaining_lbl" layoutX="11.0" layoutY="375.0" styleClass="label_value" text="150" />
+               <Text layoutX="17.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Notes for Book Payment" />
+               <Label fx:id="bookPayNote_lbl" layoutX="12.0" layoutY="427.0" prefHeight="38.0" prefWidth="254.0" styleClass="label_value" text="Next Time" />
+               <Button fx:id="RegmonthlyPay_btn" layoutX="14.0" layoutY="208.0" mnemonicParsing="false" styleClass="button_primary" text="Pay" />
+            </AnchorPane>
+            <Button fx:id="quickRegister_btn" layoutX="667.0" layoutY="514.0" mnemonicParsing="false" style="-fx-background-color: #2E8B57;" styleClass="button_primary" text="Register" />
+            <VBox layoutX="639.0" layoutY="166.0" prefHeight="223.0" prefWidth="206.0" style="-fx-background-color: #ffffff;" styleClass="report_container">
+               <Button fx:id="centerToOnline_btn" mnemonicParsing="false" prefHeight="26.0" prefWidth="139.0" style="-fx-pref-width: 200;" styleClass="button_primary" text="Center -&gt; Online" />
+               <Button fx:id="onlineToCenter_btn" mnemonicParsing="false" style="-fx-pref-width: 200;" styleClass="button_primary" text="Online -&gt; Center" />
+               <Button fx:id="changeGroup_btn" mnemonicParsing="false" style="-fx-pref-width: 200;" styleClass="button_primary" text="Change Group" />
+               <Line endX="100.0" startX="-100.0" style="-fx-cursor: bold;" />
+               <Button fx:id="removeStudent_btn" mnemonicParsing="false" style="-fx-pref-width: 200; -fx-background-color: FF0000;" styleClass="button_primary" text="Remove Student" />
+            </VBox>
+            <Label fx:id="registrationTime_lbl" layoutX="678.0" layoutY="34.0" styleClass="label_title" text="Registration Time :" />
+            <Label fx:id="registrationTime_value" layoutX="645.0" layoutY="57.0" prefHeight="28.0" prefWidth="191.0" text="4/21/2025 10:35 PM ">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </AnchorPane>
+      </Tab>
+      <Tab fx:id="defaultreg_tab" closable="false" text="Default Registration">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <AnchorPane layoutX="-19.0" layoutY="-6.0" prefHeight="566.0" prefWidth="865.0">
+               <TableView layoutX="1.0" layoutY="33.0" prefHeight="490.0" prefWidth="891.0">
+                  <columns>
+                     <TableColumn prefWidth="60.8000214099884" text="ID" />
+                     <TableColumn prefWidth="161.8666534423828" text="Name" />
+                     <TableColumn prefWidth="126.93331909179688" text="Student Phone No." />
+                     <TableColumn prefWidth="118.13339233398438" text="Parent Phone No." />
+                     <TableColumn prefWidth="121.066650390625" text="Monthly Pay State" />
+                     <TableColumn prefWidth="104.800048828125" text="Book Pay State" />
+                     <TableColumn prefWidth="131.4666748046875" text="Registration Time" />
+                     <TableColumn prefWidth="66.93341064453125" text="Edit" />
+                  </columns>
+               </TableView>
+               <SplitMenuButton fx:id="registrationFilter_menu" layoutX="375.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="450.0" styleClass="account_selector" text="selcet a filter">
+                  <items>
+                     <RadioMenuItem mnemonicParsing="false" />
+                     <SeparatorMenuItem mnemonicParsing="false" />
+                     <RadioMenuItem mnemonicParsing="false" />
+                     <RadioMenuItem mnemonicParsing="false" />
+                     <RadioMenuItem mnemonicParsing="false" />
+                     <RadioMenuItem mnemonicParsing="false" />
+                  </items>
+               </SplitMenuButton>
+               <Button fx:id="defualtRegister_btn" layoutX="712.0" layoutY="533.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="130.0" style="-fx-background-color: #2E8B57;" styleClass="button_primary" text="Register" />
+            </AnchorPane>
+         </AnchorPane>
+      </Tab>
+      <Tab fx:id="addStudent_tab" text="Add Student">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <AnchorPane layoutX="11.0" layoutY="18.0" prefHeight="539.0" prefWidth="838.0">
+               <Text fill="#513333" fontSmoothingType="LCD" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textAlignment="CENTER" wrappingWidth="62.89335250854492">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </Text>
+               <TextField fx:id="addstdName_fld" layoutX="21.0" layoutY="35.0" prefHeight="30.0" prefWidth="383.0" />
+               <Text fill="#513333" fontSmoothingType="LCD" layoutX="14.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Phone Number" textAlignment="CENTER" wrappingWidth="188.4933738708496">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </Text>
+               <TextField fx:id="addstdPhoneNo_fld" layoutX="21.0" layoutY="104.0" prefHeight="30.0" prefWidth="384.0" />
+               <Text fill="#513333" fontSmoothingType="LCD" layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parent Phone Number" textAlignment="CENTER" wrappingWidth="188.4933738708496">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </Text>
+               <TextField fx:id="addstdParentNo_fld" layoutX="21.0" layoutY="180.0" prefHeight="30.0" prefWidth="382.0" />
+               <Text fx:id="addStudentID_lbl" layoutX="551.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="28.40753173828125">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Text>
+               <Label fx:id="addStudentID_value" layoutX="528.0" layoutY="40.0" prefHeight="54.0" prefWidth="73.0" style="-fx-background-color: #;" text="S-222" textAlignment="CENTER">
+                  <font>
+                     <Font size="26.0" />
+                  </font>
+               </Label>
+               <ChoiceBox fx:id="addstdGroup_choiceBox" layoutX="419.0" layoutY="157.0" prefHeight="46.0" prefWidth="413.0" />
+               <Text fx:id="addStudentChoosegp_lbl" layoutX="510.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a group" wrappingWidth="140.79999999999995">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Text>
+               <Button fx:id="addstudent_btn" layoutX="663.0" layoutY="477.0" mnemonicParsing="false" styleClass="button_primary" text="Add Student" />
+               <Button layoutX="21.0" layoutY="478.0" mnemonicParsing="false" style="-fx-background-color: #2E8B57;" styleClass="button_primary" text="Payment" />
+               <ChoiceBox layoutX="21.0" layoutY="241.0" prefWidth="150.0" styleClass="check-box" />
+            </AnchorPane>
+         </AnchorPane>
+      </Tab>
+   </TabPane>
+   <Button fx:id="startRegistration_btn" layoutX="391.0" layoutY="735.0" mnemonicParsing="false" prefWidth="132.0" style="-fx-background-color: #2E8B57; -fx-pref-width: 130; -fx-text-alignment: center;" styleClass="button_primary" text="Start Registration" />
+</AnchorPane>
