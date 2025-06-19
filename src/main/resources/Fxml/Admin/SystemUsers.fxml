@@ -1,8 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="800.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.perfectionsystem.Controllers.Admin.SystemUsersController">
-
+<AnchorPane prefHeight="800.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.perfectionsystem.Controllers.Admin.SystemUsersController">
+    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="770.0" prefWidth="925.0"
+                stylesheets="@../../Styles/Registration.css"/>
+    <TabPane layoutX="10.0" layoutY="10.0" prefHeight="770.0" prefWidth="926.0"
+             stylesheets="@../../Styles/Registration.css" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="System Users Mangement">
+            <AnchorPane prefHeight="695.0" prefWidth="898.0">
+                <SplitMenuButton fx:id="systemUsersFilter_menu" layoutX="429.0" layoutY="10.0"
+                                 mnemonicParsing="false" prefHeight="21.0" prefWidth="450.0"
+                                 styleClass="account_selector" text="selcet a filter">
+                    <items>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                    </items>
+                </SplitMenuButton>
+                <TableView layoutX="14.0" layoutY="55.0" prefHeight="598.0" prefWidth="891.0">
+                    <columns>
+                        <TableColumn prefWidth="60.8000214099884" text="ID"/>
+                        <TableColumn prefWidth="216.8000030517578" text="User Name"/>
+                        <TableColumn prefWidth="95.20001220703125" text="User Type"/>
+                        <TableColumn prefWidth="128.79998779296875" text="Registration Access"/>
+                        <TableColumn prefWidth="88.800048828125" text="Exam Access"/>
+                        <TableColumn prefWidth="110.4000244140625" text="Hand in Access"/>
+                        <TableColumn prefWidth="139.199951171875" text="Edit"/>
+                    </columns>
+                </TableView>
+                <HBox layoutX="15.0" layoutY="7.0" prefHeight="42.0" prefWidth="307.0"
+                      stylesheets="@../../Styles/Registration.css">
+                    <TextField fx:id="systemUsersNameSearch_fld" prefHeight="37.0" prefWidth="148.0"
+                               promptText="Name"/>
+                    <Button fx:id="systemUserssearch_btn" mnemonicParsing="false" prefHeight="35.0"
+                            prefWidth="174.0" style="-fx-pref-height: 37;" styleClass="button_primary"
+                            text="Search">
+                        <graphic>
+                            <FontAwesomeIconView glyphName="SEARCH"/>
+                        </graphic>
+                    </Button>
+                </HBox>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Add User">
+            <AnchorPane prefHeight="695.0" prefWidth="898.0">
+                <Button fx:id="addUser_btn" layoutX="732.0" layoutY="379.0" mnemonicParsing="false"
+                        style="-fx-background-color: #2E8B57;" styleClass="button_primary" text="Add User"/>
+                <SplitMenuButton fx:id="userAcess_menu" layoutX="31.0" layoutY="339.0"
+                                 mnemonicParsing="false" prefWidth="160.0" style="-fx-pref-width: 150;"
+                                 styleClass="alt_menu_btn" text="Select Access">
+                    <items>
+                        <CheckMenuItem mnemonicParsing="false" text="Registration"/>
+                        <CheckMenuItem mnemonicParsing="false" text="Exam"/>
+                        <CheckMenuItem mnemonicParsing="false" text="Hand in"/>
+                    </items>
+                </SplitMenuButton>
+                <Text layoutX="36.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="label_title" text="Username"/>
+                <Text layoutX="31.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="label_title" text="Password"/>
+                <Text layoutX="36.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="label_title" text="User Type"/>
+                <TextField fx:id="addUserName_fld" layoutX="32.0" layoutY="91.0"/>
+                <PasswordField fx:id="addUserPassword_fld" layoutX="32.0" layoutY="156.0"/>
+                <ChoiceBox fx:id="addUserType_choiceBox" layoutX="34.0" layoutY="245.0" prefHeight="38.0"
+                           prefWidth="150.0" style="-fx-background-color: #3498db;"
+                           styleClass="account_selector" stylesheets="@../../Styles/Registration.css"/>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
 </AnchorPane>

@@ -27,6 +27,7 @@ public class AdminMenuController implements Initializable {
             booklets_btn.setOnAction(event -> onBooklets());
             employees_btn.setOnAction(event -> onEmployees());
             systemUsers_btn.setOnAction(event -> onSystemUsers());
+            logs_btn.setOnAction(event ->onLogs() );
             logout_btn.setOnAction(event -> onLogout());
         }
         private void onAdminstration(){
@@ -40,6 +41,9 @@ public class AdminMenuController implements Initializable {
         }
         private void onSystemUsers(){
             Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.SystemUsers);
+        }
+        private void onLogs(){
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.Logs);
         }
         private void onLogout(){
             Stage stage =(Stage)adminstration_btn.getScene().getWindow();

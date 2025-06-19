@@ -1,11 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
-<?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.perfectionsystem.Controllers.Admin.LogsController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="800.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.perfectionsystem.Controllers.Admin.LogsController">
+    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="770.0" prefWidth="925.0"
+                stylesheets="@../../Styles/Registration.css" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0"/>
+    <AnchorPane layoutX="11.0" layoutY="15.0" prefHeight="712.0" prefWidth="898.0">
+        <SplitMenuButton fx:id="logsFilter_menu" layoutX="429.0" layoutY="4.0" mnemonicParsing="false"
+                         prefHeight="21.0" prefWidth="450.0" styleClass="account_selector"
+                         stylesheets="@../../Styles/Registration.css" text="selcet a filter">
+            <items>
+                <RadioMenuItem mnemonicParsing="false"/>
+                <SeparatorMenuItem mnemonicParsing="false"/>
+                <RadioMenuItem mnemonicParsing="false"/>
+                <RadioMenuItem mnemonicParsing="false"/>
+                <RadioMenuItem mnemonicParsing="false"/>
+                <RadioMenuItem mnemonicParsing="false"/>
+            </items>
+        </SplitMenuButton>
+        <TableView layoutX="-2.0" layoutY="44.0" prefHeight="726.0" prefWidth="926.0"
+                   stylesheets="@../../Styles/Registration.css">
+            <columns>
+                <TableColumn prefWidth="60.8000214099884" text="User ID"/>
+                <TableColumn prefWidth="81.5999755859375" text="username"/>
+                <TableColumn prefWidth="96.79998779296875" text="action"/>
+                <TableColumn prefWidth="106.40003967285156" text="previous value"/>
+                <TableColumn prefWidth="114.4000244140625" text="new value"/>
+                <TableColumn prefWidth="217.5999755859375" text="time"/>
+            </columns>
+        </TableView>
+        <HBox layoutX="14.0" layoutY="-3.0" prefHeight="42.0" prefWidth="307.0"
+              stylesheets="@../../Styles/Registration.css">
+            <children>
+                <TextField fx:id="LogsNameSearch_fld" prefHeight="37.0" prefWidth="148.0" promptText="Name"/>
+                <Button fx:id="Logssearch_btn" mnemonicParsing="false" prefHeight="35.0" prefWidth="174.0"
+                        style="-fx-pref-height: 37;" styleClass="button_primary" text="Search">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="SEARCH"/>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+    </AnchorPane>
 </AnchorPane>

@@ -1,8 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="800.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.perfectionsystem.Controllers.Admin.BookletsController">
-
+<AnchorPane prefHeight="800.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.perfectionsystem.Controllers.Admin.BookletsController">
+   <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="770.0" prefWidth="925.0" AnchorPane.leftAnchor="14.0"
+               AnchorPane.topAnchor="14.0">
+      <TabPane layoutX="14.0" layoutY="7.0" prefHeight="758.0" prefWidth="906.0"
+               stylesheets="@../../Styles/Registration.css" tabClosingPolicy="UNAVAILABLE">
+         <Tab text="Orders Mangement">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../../Styles/Registration.css">
+               <AnchorPane layoutX="1.0" layoutY="5.0" prefHeight="712.0" prefWidth="898.0">
+                  <SplitMenuButton fx:id="orderFilter_menu" layoutX="429.0" layoutY="4.0"
+                                   mnemonicParsing="false" prefHeight="21.0" prefWidth="450.0"
+                                   styleClass="account_selector" text="selcet a filter">
+                     <items>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                        <RadioMenuItem mnemonicParsing="false"/>
+                     </items>
+                  </SplitMenuButton>
+                  <TableView layoutX="-2.0" layoutY="44.0" prefHeight="657.0" prefWidth="891.0">
+                     <columns>
+                        <TableColumn prefWidth="60.8000214099884" text="ID"/>
+                        <TableColumn prefWidth="153.59993743896484" text="Order Name"/>
+                        <TableColumn prefWidth="124.800048828125" text="Ordered From"/>
+                        <TableColumn prefWidth="104.0" text="Total Amount "/>
+                        <TableColumn prefWidth="125.60000610351562" text="Remaining Amount"/>
+                        <TableColumn prefWidth="104.79998779296875" text="Order State"/>
+                        <TableColumn prefWidth="139.199951171875" text="Description"/>
+                        <TableColumn prefWidth="61.60009765625" text="Edit"/>
+                     </columns>
+                  </TableView>
+                  <HBox layoutX="14.0" layoutY="-3.0" prefHeight="42.0" prefWidth="307.0"
+                        stylesheets="@../../Styles/Registration.css">
+                     <TextField fx:id="OrderNameSearch_fld" prefHeight="37.0" prefWidth="148.0"
+                                promptText="Name"/>
+                     <Button fx:id="Ordersearch_btn" mnemonicParsing="false" prefHeight="35.0"
+                             prefWidth="174.0" style="-fx-pref-height: 37;"
+                             styleClass="button_primary" text="Search">
+                        <graphic>
+                           <FontAwesomeIconView glyphName="SEARCH"/>
+                        </graphic>
+                     </Button>
+                  </HBox>
+               </AnchorPane>
+            </AnchorPane>
+         </Tab>
+         <Tab text="Place an order">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <Text layoutX="45.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     styleClass="label_title" text="Order Name"/>
+               <Text layoutX="48.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     styleClass="label_title" text="Ordered From"/>
+               <Text layoutX="47.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     styleClass="label_title" text="Order Amount"/>
+               <AnchorPane layoutX="14.0" layoutY="236.0" prefHeight="233.0" prefWidth="858.0"
+                           stylesheets="@../../Styles/Registration.css">
+                  <Text layoutX="39.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        styleClass="label_title" text="Alpha Station"/>
+                  <Text layoutX="264.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        styleClass="label_title" text="West Academy "/>
+                  <Text layoutX="36.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        styleClass="label_title" text="New Cambridge"/>
+                  <Text layoutX="36.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        styleClass="label_title" text="Alpha Maimi"/>
+                  <Text layoutX="264.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        styleClass="label_title" text="Cairo"/>
+                  <Text layoutX="264.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        styleClass="label_title" text="Ramlia" wrappingWidth="64.33709716796875"/>
+                  <Text layoutX="538.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        styleClass="label_title" text="others"/>
+                  <TextField fx:id="orderToAlphaStation_fld" layoutX="35.0" layoutY="38.0"
+                             prefHeight="30.0" prefWidth="84.0"/>
+                  <TextField fx:id="orderToCairo_fld" layoutX="265.0" layoutY="165.0" prefWidth="84.0"/>
+                  <TextField fx:id="orderToNewCambridge_fld" layoutX="36.0" layoutY="101.0"
+                             prefHeight="30.0" prefWidth="84.0"/>
+                  <TextField fx:id="orderToRamlia_fld" layoutX="264.0" layoutY="101.0" prefWidth="84.0"/>
+                  <TextField fx:id="orderToAlphaMaimi_fld" layoutX="36.0" layoutY="168.0"
+                             prefWidth="84.0"/>
+                  <TextField fx:id="orderToWestAcademy_fld" layoutX="264.0" layoutY="38.0"
+                             prefHeight="30.0" prefWidth="84.0"/>
+                  <TextField fx:id="orderToOthers_fld" layoutX="535.0" layoutY="96.0" prefWidth="84.0"/>
+               </AnchorPane>
+               <TextField fx:id="orderName_fld" layoutX="47.0" layoutY="64.0" prefHeight="30.0"
+                          prefWidth="209.0"/>
+               <TextField fx:id="orderAmount_fld" layoutX="46.0" layoutY="185.0" prefHeight="30.0"
+                          prefWidth="86.0"/>
+               <TextField fx:id="orderFrom_fld" layoutX="46.0" layoutY="128.0" prefHeight="30.0"
+                          prefWidth="210.0"/>
+               <TextField fx:id="orderState_fld" layoutX="355.0" layoutY="97.0"/>
+               <Text layoutX="355.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     styleClass="label_title" text="Order State"/>
+               <TextField fx:id="orderDescription_fld" layoutX="355.0" layoutY="185.0" prefHeight="30.0"
+                          prefWidth="506.0"/>
+               <Text layoutX="355.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     styleClass="label_title" text="Order Description"/>
+               <Button fx:id="placeOrder_btn" layoutX="355.0" layoutY="497.0" mnemonicParsing="false"
+                       style="-fx-background-color: #2E8B57;" styleClass="button_primary"
+                       text="Place Order "/>
+            </AnchorPane>
+         </Tab>
+      </TabPane>
+   </AnchorPane>
 </AnchorPane>
