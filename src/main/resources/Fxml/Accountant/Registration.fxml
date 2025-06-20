@@ -36,6 +36,7 @@
          <Font size="22.0" />
       </font>
    </CheckBox>
+   <Button fx:id="startRegistration_btn" layoutX="391.0" layoutY="735.0" mnemonicParsing="false" prefWidth="132.0" style="-fx-background-color: #2E8B57; -fx-pref-width: 130; -fx-text-alignment: center;" styleClass="button_primary" text="Start Registration" />
    <TabPane layoutX="16.0" layoutY="74.0" prefHeight="651.0" prefWidth="920.0" styleClass="tab" stylesheets="@../../Styles/Registration.css" tabClosingPolicy="UNAVAILABLE">
       <Tab fx:id="quickreg_tab" closable="false" text="Quick Registration">
          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -160,6 +161,27 @@
             </AnchorPane>
          </AnchorPane>
       </Tab>
+      <Tab text="Online ">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <Text layoutX="37.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title"
+                  text="Name"/>
+            <Text layoutX="36.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title"
+                  text="Student Number"/>
+            <Text layoutX="36.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title"
+                  text="Parent Number" wrappingWidth="147.9999999999999"/>
+            <Text layoutX="35.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title"
+                  text="Notes" wrappingWidth="50.936710357666016"/>
+            <ChoiceBox fx:id="onlineType_choiceBox" layoutX="384.0" layoutY="222.0" prefWidth="150.0"/>
+            <Text layoutX="387.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title"
+                  text="Type" wrappingWidth="50.936710357666016"/>
+            <TextField fx:id="onlineName_fld" layoutX="36.0" layoutY="75.0"/>
+            <TextField fx:id="onlineStudentNo_fld" layoutX="36.0" layoutY="171.0"/>
+            <TextField fx:id="onlineParentNo_fld" layoutX="36.0" layoutY="257.0"/>
+            <TextField fx:id="onlineNotes_fld" layoutX="36.0" layoutY="342.0"/>
+            <Button fx:id="onlineDone_btn" layoutX="715.0" layoutY="521.0" mnemonicParsing="false" prefWidth="132.0"
+                    style="-fx-background-color: #2E8B57; -fx-pref-width: 130; -fx-text-alignment: center;"
+                    styleClass="button_primary" text="Done"/>
+         </AnchorPane>
+      </Tab>
    </TabPane>
-   <Button fx:id="startRegistration_btn" layoutX="391.0" layoutY="735.0" mnemonicParsing="false" prefWidth="132.0" style="-fx-background-color: #2E8B57; -fx-pref-width: 130; -fx-text-alignment: center;" styleClass="button_primary" text="Start Registration" />
 </AnchorPane>

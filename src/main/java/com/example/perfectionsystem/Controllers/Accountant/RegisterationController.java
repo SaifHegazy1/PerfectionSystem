@@ -58,6 +58,12 @@ public class RegisterationController implements Initializable {
     public Button RegBookPay_btn;
     public Button RegmonthlyPay_btn;
     public SplitMenuButton registrationFilter_menu;
+    public ChoiceBox onlineType_choiceBox;
+    public TextField onlineName_fld;
+    public TextField onlineStudentNo_fld;
+    public TextField onlineParentNo_fld;
+    public TextField onlineNotes_fld;
+    public Button onlineDone_btn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -43,15 +43,13 @@
         </TableView>
         <HBox layoutX="14.0" layoutY="-3.0" prefHeight="42.0" prefWidth="307.0"
               stylesheets="@../../Styles/Registration.css">
-            <children>
-                <TextField fx:id="LogsNameSearch_fld" prefHeight="37.0" prefWidth="148.0" promptText="Name"/>
-                <Button fx:id="Logssearch_btn" mnemonicParsing="false" prefHeight="35.0" prefWidth="174.0"
-                        style="-fx-pref-height: 37;" styleClass="button_primary" text="Search">
-                    <graphic>
-                        <FontAwesomeIconView glyphName="SEARCH"/>
-                    </graphic>
-                </Button>
-            </children>
+            <TextField fx:id="LogsNameSearch_fld" prefHeight="37.0" prefWidth="148.0" promptText="Name"/>
+            <Button fx:id="Logssearch_btn" mnemonicParsing="false" prefHeight="35.0" prefWidth="174.0"
+                    style="-fx-pref-height: 37;" styleClass="button_primary" text="Search">
+                <graphic>
+                    <FontAwesomeIconView glyphName="SEARCH"/>
+                </graphic>
+            </Button>
         </HBox>
     </AnchorPane>
 </AnchorPane>
