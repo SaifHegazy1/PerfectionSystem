@@ -22,6 +22,7 @@ public class AdminstrationController implements Initializable {
     public Button exportCenterToOnline_btn;
     public Button exportWhatsappBot_btn;
     public SplitMenuButton whatsappBot_menu;
+    public Button startShamel_btn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -18,8 +18,9 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <HBox layoutX="22.0" layoutY="70.0" prefHeight="39.0" prefWidth="490.0" style="-fx-spacing: 20;" styleClass="box">
+      <HBox layoutX="2.0" layoutY="70.0" prefHeight="39.0" prefWidth="643.0" style="-fx-spacing: 20;" styleClass="box">
          <Button fx:id="StartLec_btn" mnemonicParsing="false" styleClass="button_primary" text="Start New Lecture" />
+         <Button fx:id="startShamel_btn" mnemonicParsing="false" prefHeight="39.0" prefWidth="166.0" styleClass="button_primary" text="Start Shamel or Rev" />
          <Button fx:id="startMonth_btn" mnemonicParsing="false" styleClass="button_primary" text="Start New Month" />
          <Button fx:id="startHandIn_btn" mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" styleClass="button_primary" text="Start Handing In" />
       </HBox>
@@ -69,10 +70,10 @@
                </SplitMenuButton>
                <Button fx:id="exportCenterToOnline_btn" layoutX="79.0" layoutY="136.0" mnemonicParsing="false" styleClass="button_primary" text="export file" />
             </AnchorPane>
-            <AnchorPane layoutX="13.0" layoutY="442.0" prefHeight="200.0" prefWidth="300.0" styleClass="content_container">
+            <AnchorPane layoutX="14.0" layoutY="442.0" prefHeight="200.0" prefWidth="300.0" styleClass="content_container">
                <Text layoutX="7.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="Whatsapp Bot" wrappingWidth="129.5999999999999" />
                <Text layoutX="20.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label_title" text="choose day" />
-               <Button fx:id="exportWhatsappBot_btn" layoutX="61.0" layoutY="143.0" mnemonicParsing="false" styleClass="button_primary" text="export file" />
+               <Button fx:id="exportWhatsappBot_btn" layoutX="72.0" layoutY="143.0" mnemonicParsing="false" styleClass="button_primary" text="Select a Group" />
                <SplitMenuButton fx:id="whatsappBot_menu" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="270.0">
                   <items>
                      <MenuItem mnemonicParsing="false" text="Action 1" />

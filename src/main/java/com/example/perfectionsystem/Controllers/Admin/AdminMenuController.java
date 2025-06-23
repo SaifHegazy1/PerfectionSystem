@@ -49,6 +49,6 @@ public class AdminMenuController implements Initializable {
             Stage stage =(Stage)adminstration_btn.getScene().getWindow();
             Model.getInstance().getViewFactory().showLoginWindow();;
             Model.getInstance().getViewFactory().closeStage(stage);
-
+            Model.getInstance().setAdminLoginSuccessFlag(false);
         }
     }
