@@ -2,6 +2,7 @@ package com.example.perfectionsystem.Views;
 
 import com.example.perfectionsystem.Controllers.Accountant.AccountantController;
 import com.example.perfectionsystem.Controllers.Admin.AdminController;
+import com.example.perfectionsystem.Models.Model;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
@@ -182,6 +183,7 @@ private final ObjectProperty<AdminMenuOptions> adminSelectedMenuItem;
 public void showLoginWindow(){
     FXMLLoader loader=new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
     Scene scene=null;
+    Model.getInstance().setAccountantLoginSuccessFlag(false);
 try{
     scene=new Scene(loader.load());
 }catch (Exception e){

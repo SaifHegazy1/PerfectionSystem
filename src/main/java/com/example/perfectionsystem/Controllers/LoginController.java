@@ -4,10 +4,7 @@ import com.example.perfectionsystem.Models.Model;
 import com.example.perfectionsystem.Views.AccountType;
 import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -16,7 +13,7 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
     public ChoiceBox<AccountType> acc_choiceBox;
     public TextField username_fld;
-    public TextField password_fld;
+    public PasswordField password_fld;
     public Label error_lbl;
     public Button login_btn;
 
@@ -32,11 +29,33 @@ public class LoginController implements Initializable {
 private void onLogin(){
     Stage stage =(Stage)error_lbl.getScene().getWindow();
     if(Model.getInstance().getViewFactory().getLoginAccountType()==AccountType.ACCOUNTANT){
+        //Evaluate Client Login Credentials
+        Model.getInstance().ecaluateAccountantCred(username_fld.getText(),password_fld.getText());
+        if(Model.getInstance().getAccountantLoginSuccessFlag()){
+
             Model.getInstance().getViewFactory().showAccountantWindow();
+            //Close the login stage
             Model.getInstance().getViewFactory().closeStage(stage);
+        }else{
+            username_fld.setText("");
+            password_fld.setText("");
+            error_lbl.setText("No Such Login Credentials");
+        }
+
     }else{
-        Model.getInstance().getViewFactory().showAdminWindow();
-        Model.getInstance().getViewFactory().closeStage(stage);
+        //Evaluate Client Login Credentials
+        Model.getInstance().ecaluateAdminCred(username_fld.getText(),password_fld.getText());
+        if(Model.getInstance().getAdminLoginSuccessFlag()){
+
+            Model.getInstance().getViewFactory().showAdminWindow();
+            //Close the login stage
+            Model.getInstance().getViewFactory().closeStage(stage);
+        }else{
+            username_fld.setText("");
+            password_fld.setText("");
+            error_lbl.setText("No Such Login Credentials");
+        }
+
     }
 
     }

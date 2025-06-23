@@ -10,7 +10,6 @@ import java.util.ResourceBundle;
 public class RegisterationController implements Initializable {
 
     public Button startRegistration_btn;
-    public CheckBox revision_checkbox;
     public Tab quickreg_tab;
 
 
